@@ -2,7 +2,7 @@
 为了给自己宝宝取名字, 做得比较简单, 图个开心
 先记录一下使用步骤, 方便后期再次完善开发, 以后再完善
 
-原理: 先自己算出宝宝的五行,再根据五行字组合名字算三才五格,得到一个满意的名字
+原理: 先自己算出宝宝的五行,再根据五行字组合出几十万个备选名字, 再将计算这些名字的三才五格评分,最后用mysql语句统计自己想要的
 
 ## 使用需要具备
 mysql 使用知识、 php基础知识、 laravel基础知识
@@ -52,5 +52,5 @@ http://hanyu.baidu.com/s?wd=五行属土的字
     AND
     (`name_wuxing`='火水木'  OR `name_wuxing`='火木水')
     
-    ORDER BY sancai_jixiong,tiange_jixiong,renge_jixiong,dige_jixiong,waige_jixiong,zongge_jixiong ASC limit 1
+    ORDER BY sancai_jixiong,tiange_jixiong,renge_jixiong,dige_jixiong,waige_jixiong,zongge_jixiong ASC
     ;
